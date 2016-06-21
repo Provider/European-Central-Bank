@@ -26,4 +26,14 @@ class CurrencyRecords extends CountableProviderRecords
     {
         return $this->date;
     }
+
+    /**
+     * Converts the records to an associative array.
+     *
+     * @return float[] Currency code as key and exchange rate as value.
+     */
+    public function toAssociativeArray()
+    {
+        return array_column(iterator_to_array($this), 'rate', 'currency');
+    }
 }

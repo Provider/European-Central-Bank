@@ -22,7 +22,7 @@ final class ForeignExchangeReferenceRatesTest extends \PHPUnit_Framework_TestCas
         // There must be at least 25 exchange rates.
         self::assertGreaterThan(25, count($currencyRecords));
 
-        $rates = array_column(iterator_to_array($fxRates), 'rate', 'currency');
+        $rates = $currencyRecords->toAssociativeArray();
 
         // Ensure major world currencies are available.
         foreach (['USD', 'GBP', 'JPY'] as $currency) {
