@@ -11,7 +11,7 @@ class ForeignExchangeReferenceRates implements ProviderDataFetcher
 
     public function getProviderName()
     {
-        return EcbProvider::class;
+        return EuropeanCentralBankProvider::class;
     }
 
     public function fetch(Connector $connector)
