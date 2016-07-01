@@ -20,9 +20,9 @@ class ForeignExchangeReferenceRates implements ProviderDataFetcher
         $xml = simplexml_load_string($xmlString);
 
         $ratesContainer = $xml->Cube->Cube;
-        $date = (string) $ratesContainer['time'];
-        $rates = $ratesContainer->Cube;
+        $date = (string)$ratesContainer['time'];
 
+        $rates = $ratesContainer->Cube;
         $currencies = function () use ($rates) {
             /** @var \SimpleXMLElement[] $rates */
             foreach ($rates as $rate) {
