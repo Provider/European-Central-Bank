@@ -24,7 +24,7 @@ class ForeignExchangeReferenceRates implements ProviderDataFetcher
         $rates = $ratesContainer->Cube;
 
         $currencies = function () use ($rates) {
-            /** @var \DOMElement[] $rates */
+            /** @var \SimpleXMLElement[] $rates */
             foreach ($rates as $rate) {
                 yield [
                     'currency' => (string)$rate['currency'],
