@@ -16,19 +16,19 @@ class ForeignExchangeReferenceRates implements ProviderDataFetcher
 
     public function fetch(Connector $connector)
     {
-        $xml = $connector->fetch(self::URL);
-        $crawler = new Crawler($xml);
+        $xmlString = $connector->fetch(self::URL);
+        $xml = simplexml_load_string($xmlString);
 
-        $ratesContainer = $crawler->filterXPath('./*/default:Cube/default:Cube[1]');
-        $date = $ratesContainer->attr('time');
+        $ratesContainer = $xml->Cube->Cube;
+        $date = (string) $ratesContainer['time'];
+        $rates = $ratesContainer->Cube;
 
-        $rates = $ratesContainer->filterXPath('./*/default:Cube');
         $currencies = function () use ($rates) {
             /** @var \DOMElement[] $rates */
             foreach ($rates as $rate) {
                 yield [
-                    'currency' => $rate->getAttribute('currency'),
-                    'rate' => (float)$rate->getAttribute('rate'),
+                    'currency' => (string)$rate['currency'],
+                    'rate' => (float)$rate['rate'],
                 ];
             }
         };
