@@ -3,7 +3,6 @@ namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank;
 
 use ScriptFUSION\Porter\Connector\Connector;
 use ScriptFUSION\Porter\Provider\ProviderDataFetcher;
-use Symfony\Component\DomCrawler\Crawler;
 
 class ForeignExchangeReferenceRates implements ProviderDataFetcher
 {
@@ -20,7 +19,7 @@ class ForeignExchangeReferenceRates implements ProviderDataFetcher
         $xml = simplexml_load_string($xmlString);
 
         $ratesContainer = $xml->Cube->Cube;
-        $date = (string)$ratesContainer['time'];
+        $date = $ratesContainer['time'];
 
         $rates = $ratesContainer->Cube;
         $currencies = function () use ($rates) {
