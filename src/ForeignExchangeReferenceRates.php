@@ -2,13 +2,13 @@
 namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank;
 
 use ScriptFUSION\Porter\Connector\Connector;
-use ScriptFUSION\Porter\Provider\ProviderDataFetcher;
+use ScriptFUSION\Porter\Provider\DataSource\ProviderDataSource;
 
-class ForeignExchangeReferenceRates implements ProviderDataFetcher
+class ForeignExchangeReferenceRates implements ProviderDataSource
 {
     const URL = 'http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml';
 
-    public function getProviderName()
+    public function getProviderClassName()
     {
         return EuropeanCentralBankProvider::class;
     }

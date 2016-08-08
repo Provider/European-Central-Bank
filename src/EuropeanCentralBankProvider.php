@@ -2,9 +2,9 @@
 namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank;
 
 use ScriptFUSION\Porter\Net\Http\HttpConnector;
-use ScriptFUSION\Porter\Provider\Provider;
+use ScriptFUSION\Porter\Provider\AbstractProvider;
 
-final class EuropeanCentralBankProvider extends Provider
+final class EuropeanCentralBankProvider extends AbstractProvider
 {
     public function __construct(HttpConnector $connector = null)
     {

@@ -2,7 +2,7 @@
 namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank;
 
 use ScriptFUSION\Porter\Collection\CountableProviderRecords;
-use ScriptFUSION\Porter\Provider\ProviderDataFetcher;
+use ScriptFUSION\Porter\Provider\DataSource\ProviderDataSource;
 
 class CurrencyRecords extends CountableProviderRecords
 {
@@ -12,9 +12,9 @@ class CurrencyRecords extends CountableProviderRecords
         \Iterator $providerRecords,
         \DateTimeImmutable $date,
         $count,
-        ProviderDataFetcher $dataFetcher
+        ProviderDataSource $dataSource
     ) {
-        parent::__construct($providerRecords, $count, $dataFetcher);
+        parent::__construct($providerRecords, $count, $dataSource);
 
         $this->date = $date;
     }
