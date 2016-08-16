@@ -1,8 +1,8 @@
 <?php
-namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank;
+namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank\Records;
 
 use ScriptFUSION\Porter\Collection\CountableProviderRecords;
-use ScriptFUSION\Porter\Provider\DataSource\ProviderDataSource;
+use ScriptFUSION\Porter\Provider\Resource\ProviderResource;
 
 class CurrencyRecords extends CountableProviderRecords
 {
@@ -12,9 +12,9 @@ class CurrencyRecords extends CountableProviderRecords
         \Iterator $providerRecords,
         \DateTimeImmutable $date,
         $count,
-        ProviderDataSource $dataSource
+        ProviderResource $resource
     ) {
-        parent::__construct($providerRecords, $count, $dataSource);
+        parent::__construct($providerRecords, $count, $resource);
 
         $this->date = $date;
     }

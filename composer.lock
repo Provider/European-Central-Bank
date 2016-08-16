@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d5ab93cf67ece2419043e0e4b6c75b2c",
-    "content-hash": "a0bdbc7a9fc7541577bb93af4bd2d2be",
+    "hash": "54a4541dda45888417c4e1381ab9de48",
+    "content-hash": "c573a3c24482466baa7daba0a8a5f7a5",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -209,16 +209,16 @@
         },
         {
             "name": "scriptfusion/porter",
-            "version": "0.4.0",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ScriptFUSION/Porter.git",
-                "reference": "0dea90f88f1b805df79d446e82aa48543f305d20"
+                "reference": "ca1ba764b775f0f12fdb7a573ce8b5d883ac844c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ScriptFUSION/Porter/zipball/0dea90f88f1b805df79d446e82aa48543f305d20",
-                "reference": "0dea90f88f1b805df79d446e82aa48543f305d20",
+                "url": "https://api.github.com/repos/ScriptFUSION/Porter/zipball/ca1ba764b775f0f12fdb7a573ce8b5d883ac844c",
+                "reference": "ca1ba764b775f0f12fdb7a573ce8b5d883ac844c",
                 "shasum": ""
             },
             "require": {
@@ -248,7 +248,7 @@
                 }
             ],
             "description": "Data import abstraction library.",
-            "time": "2016-07-24 16:02:27"
+            "time": "2016-08-15 21:26:25"
         },
         {
             "name": "scriptfusion/retry",
@@ -1627,28 +1627,29 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde"
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
-                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3|^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.6"
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -1672,7 +1673,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2015-08-24 13:29:44"
+            "time": "2016-08-09 15:02:57"
         }
     ],
     "aliases": [],

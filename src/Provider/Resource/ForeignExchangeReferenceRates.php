@@ -1,10 +1,12 @@
 <?php
-namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank;
+namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\Resource;
 
 use ScriptFUSION\Porter\Connector\Connector;
-use ScriptFUSION\Porter\Provider\DataSource\ProviderDataSource;
+use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\EuropeanCentralBankProvider;
+use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Records\CurrencyRecords;
+use ScriptFUSION\Porter\Provider\Resource\AbstractResource;
 
-class ForeignExchangeReferenceRates implements ProviderDataSource
+class ForeignExchangeReferenceRates extends AbstractResource
 {
     const URL = 'http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml';
 

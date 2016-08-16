@@ -1,5 +1,5 @@
 <?php
-namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank;
+namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider;
 
 use ScriptFUSION\Porter\Net\Http\HttpConnector;
 use ScriptFUSION\Porter\Provider\AbstractProvider;

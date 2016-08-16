@@ -2,16 +2,16 @@
 namespace ScriptFUSIONTest\Porter\Provider\EuropeanCentralBank;
 
 use ScriptFUSION\Porter\Porter;
-use ScriptFUSION\Porter\Provider\EuropeanCentralBank\CurrencyRecords;
-use ScriptFUSION\Porter\Provider\EuropeanCentralBank\EuropeanCentralBankProvider;
-use ScriptFUSION\Porter\Provider\EuropeanCentralBank\ForeignExchangeReferenceRates;
+use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\EuropeanCentralBankProvider;
+use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\Resource\ForeignExchangeReferenceRates;
+use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Records\CurrencyRecords;
 use ScriptFUSION\Porter\Specification\ImportSpecification;
 
 final class ForeignExchangeReferenceRatesTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $porter = (new Porter)->addProvider(new EuropeanCentralBankProvider);
+        $porter = (new Porter)->registerProvider(new EuropeanCentralBankProvider);
         $fxRates = $porter->import(new ImportSpecification(new ForeignExchangeReferenceRates));
 
         /** @var CurrencyRecords $currencyRecords */
