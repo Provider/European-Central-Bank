@@ -9,15 +9,16 @@ php:
   - 5.5
   - 5.6
   - 7.0
+  - 7.1
 
 install:
   - alias composer=composer\ -n && composer selfupdate
   - composer validate
-  - composer -n --prefer-source install
+  - composer --prefer-source install
 
 script:
   - bin/test --coverage-clover=build/logs/clover.xml
 
 after_success:
-  - composer -n --prefer-source require satooshi/php-coveralls
+  - composer --prefer-source require satooshi/php-coveralls
   - vendor/bin/coveralls -v

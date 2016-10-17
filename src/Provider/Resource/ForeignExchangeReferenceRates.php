@@ -2,6 +2,7 @@
 namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\Resource;
 
 use ScriptFUSION\Porter\Connector\Connector;
+use ScriptFUSION\Porter\Options\EncapsulatedOptions;
 use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\EuropeanCentralBankProvider;
 use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Records\CurrencyRecords;
 use ScriptFUSION\Porter\Provider\Resource\AbstractResource;
@@ -15,7 +16,7 @@ class ForeignExchangeReferenceRates extends AbstractResource
         return EuropeanCentralBankProvider::class;
     }
 
-    public function fetch(Connector $connector)
+    public function fetch(Connector $connector, EncapsulatedOptions $options = null)
     {
         $xmlString = $connector->fetch(self::URL);
         $xml = simplexml_load_string($xmlString);
