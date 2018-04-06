@@ -8,10 +8,12 @@
     }
   ],
   "require": {
-    "scriptfusion/porter": ">=1,<4"
+    "scriptfusion/porter": "4.0.x-dev",
+    "connectors/http": "4.0.x-dev"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4.8"
+    "phpunit/phpunit": "^4.8",
+    "mockery/mockery": "^0.9.4"
   },
   "autoload": {
     "psr-4": {

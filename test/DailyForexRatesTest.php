@@ -1,18 +1,28 @@
 <?php
 namespace ScriptFUSIONTest\Porter\Provider\EuropeanCentralBank;
 
+use Psr\Container\ContainerInterface;
 use ScriptFUSION\Porter\Porter;
 use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\EuropeanCentralBankProvider;
-use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\Resource\ForeignExchangeReferenceRates;
+use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\Resource\DailyForexRates;
 use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Records\CurrencyRecords;
 use ScriptFUSION\Porter\Specification\ImportSpecification;
 
-final class ForeignExchangeReferenceRatesTest extends \PHPUnit_Framework_TestCase
+final class DailyForexRatesTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $porter = (new Porter)->registerProvider(new EuropeanCentralBankProvider);
-        $fxRates = $porter->import(new ImportSpecification(new ForeignExchangeReferenceRates));
+        $porter = new Porter(
+            \Mockery::mock(ContainerInterface::class)
+                ->shouldReceive('has')
+                    ->with(EuropeanCentralBankProvider::class)
+                    ->andReturn(true)
+                ->shouldReceive('get')
+                    ->with(EuropeanCentralBankProvider::class)
+                    ->andReturn(new EuropeanCentralBankProvider)
+                ->getMock()
+        );
+        $fxRates = $porter->import(new ImportSpecification(new DailyForexRates));
 
         /** @var CurrencyRecords $currencyRecords */
         $currencyRecords = $fxRates->findFirstCollection();
