@@ -10,6 +10,15 @@ European Central Bank Provider
 Provides [European Central Bank](http://www.ecb.europa.eu) data for [Porter][Porter], including
 [daily foreign exchange rates][Fx rates] for over 30 currencies.
 
+Usage
+-----
+
+Add the dependency to your Composer files `require` section.
+
+```
+"provider/european-central-bank": "^4"
+```
+
 Requirements
 ------------
 
