@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace ScriptFUSION\Porter\Provider\EuropeanCentralBank\Records;
 
 use ScriptFUSION\Porter\Collection\CountableProviderRecords;
@@ -19,10 +21,7 @@ class CurrencyRecords extends CountableProviderRecords
         $this->date = $date;
     }
 
-    /**
-     * @return \DateTimeImmutable
-     */
-    public function getDate()
+    public function getDate(): \DateTimeImmutable
     {
         return $this->date;
     }
@@ -32,7 +31,7 @@ class CurrencyRecords extends CountableProviderRecords
      *
      * @return float[] Currency code as key and exchange rate as value.
      */
-    public function toAssociativeArray()
+    public function toAssociativeArray(): array
     {
         return array_column(iterator_to_array($this), 'rate', 'currency');
     }

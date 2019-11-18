@@ -1,6 +1,9 @@
 <?php
+declare(strict_types=1);
+
 namespace ScriptFUSIONTest\Porter\Provider\EuropeanCentralBank;
 
+use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use ScriptFUSION\Porter\Porter;
 use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\EuropeanCentralBankProvider;
@@ -8,7 +11,7 @@ use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Provider\Resource\DailyFore
 use ScriptFUSION\Porter\Provider\EuropeanCentralBank\Records\CurrencyRecords;
 use ScriptFUSION\Porter\Specification\ImportSpecification;
 
-final class DailyForexRatesTest extends \PHPUnit_Framework_TestCase
+final class DailyForexRatesTest extends TestCase
 {
     public function test()
     {

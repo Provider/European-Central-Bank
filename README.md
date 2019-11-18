@@ -22,7 +22,7 @@ Add the dependency to your Composer files `require` section.
 Requirements
 ------------
 
-- [PHP 5.5](http://php.net)
+- [PHP 7.1](http://php.net)
 - [Composer](http://getcomposer.org)
 - [Porter][Porter]
 

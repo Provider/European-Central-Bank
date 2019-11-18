@@ -8,12 +8,14 @@
     }
   ],
   "require": {
-    "scriptfusion/porter": "^4",
-    "connectors/http": "^2"
+    "ext-simplexml": "*",
+    "connectors/http": "dev-5.0-rc",
+    "connectors/ssl": "dev-5.0-rc",
+    "scriptfusion/porter": "dev-master as 5"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4.8",
-    "mockery/mockery": "^0.9.4"
+    "mockery/mockery": "^1",
+    "phpunit/phpunit": "^6.5"
   },
   "autoload": {
     "psr-4": {
@@ -27,5 +29,8 @@
   },
   "scripts": {
     "test": "phpunit -c test"
+  },
+  "config": {
+    "sort-packages": true
   }
 }
