@@ -9,6 +9,9 @@
   ],
   "require": {
     "ext-simplexml": "*",
+    "amphp/amp": "^2.1",
+    "amphp/process": "^1.1",
+    "amphp/parallel": "^1.1",
     "connectors/http": "dev-5.0-rc",
     "connectors/ssl": "dev-5.0-rc",
     "scriptfusion/porter": "dev-master as 5"
