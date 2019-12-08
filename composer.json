@@ -12,13 +12,12 @@
     "amphp/amp": "^2.1",
     "amphp/process": "^1.1",
     "amphp/parallel": "^1.1",
-    "connectors/http": "dev-5.0-rc",
-    "connectors/ssl": "dev-5.0-rc",
-    "scriptfusion/porter": "dev-master as 5"
+    "connectors/http": "^3",
+    "scriptfusion/porter": "^5"
   },
   "require-dev": {
-    "mockery/mockery": "^1",
-    "phpunit/phpunit": "^6.5"
+    "mockery/mockery": "^1.3",
+    "phpunit/phpunit": "^7"
   },
   "autoload": {
     "psr-4": {
