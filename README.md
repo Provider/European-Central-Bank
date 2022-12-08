@@ -7,36 +7,31 @@ European Central Bank Provider
 [![Test coverage][Coverage image]][Coverage]
 [![Code style][Style image]][Style]
 
-Provides [European Central Bank](http://www.ecb.europa.eu) data for [Porter][Porter], including
+Provides [European Central Bank][] data for [Porter][Porter], including
 [daily foreign exchange rates][Fx rates] for over 30 currencies.
 
 Usage
 -----
 
-Add the dependency to your Composer files `require` section.
+Add this provider to your project using [Composer][].
 
 ```
-"provider/european-central-bank": "^4"
+composer require provider/european-central-bank
 ```
-
-Requirements
-------------
-
-- [PHP 7.1](http://php.net)
-- [Composer](http://getcomposer.org)
-- [Porter][Porter]
 
 
   [Releases]: https://github.com/Provider/European-Central-Bank/releases
   [Version image]: https://poser.pugx.org/provider/european-central-bank/version "Latest version"
   [Downloads]: https://packagist.org/packages/provider/european-central-bank
   [Downloads image]: https://poser.pugx.org/provider/european-central-bank/downloads "Total downloads"
-  [Build]: http://travis-ci.org/Provider/European-Central-Bank
-  [Build image]: https://travis-ci.org/Provider/European-Central-Bank.svg "Build status"
+  [Build]: https://github.com/Provider/European-Central-Bank/actions/workflows/Tests.yaml
+  [Build image]: https://github.com/Provider/European-Central-Bank/actions/workflows/Tests.yaml/badge.svg "Build status"
   [Coverage]: https://coveralls.io/github/Provider/European-Central-Bank
   [Coverage image]: https://coveralls.io/repos/Provider/European-Central-Bank/badge.svg "Test coverage"
   [Style]: https://styleci.io/repos/61535152
   [Style image]: https://styleci.io/repos/61535152/shield?style=flat "Code style"
 
   [Porter]: https://github.com/ScriptFUSION/Porter
+  [European Central Bank]: http://www.ecb.europa.eu
   [Fx rates]: http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html
+  [Composer]: https://getcomposer.org
