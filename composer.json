@@ -15,6 +15,7 @@
     "scriptfusion/porter": "^7"
   },
   "require-dev": {
+    "amphp/dns": "v2.x-dev",
     "amphp/socket": "v2.0.0-beta.7",
     "mockery/mockery": "^1.5",
     "phpunit/phpunit": "^9.5.23"
