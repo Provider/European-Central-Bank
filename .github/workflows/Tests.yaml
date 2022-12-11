@@ -24,9 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Stunnel
-        run: sudo apt-get install --yes stunnel
-
       - name: Setup PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
         with:
