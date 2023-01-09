@@ -15,7 +15,8 @@
     "scriptfusion/porter": "^7"
   },
   "require-dev": {
-    "amphp/socket": "v2.0.0-beta.7",
+    "amphp/http-client": "v5.0.0-beta.7",
+    "amphp/socket": "v2.0.0-beta.8",
     "mockery/mockery": "^1.5",
     "phpunit/phpunit": "^9.5.23"
   },
